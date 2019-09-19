@@ -1,5 +1,5 @@
 {
-	"user": "trello",
+	"user": "",
 	"password": "",
 	"ip": "",
 	"port": 28015,
@@ -29,6 +29,6 @@
 	"redis": {
 		"host": "",
 		"port": 6379,
-    "password": ""
+                "password": ""
 	}
 }
