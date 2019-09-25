@@ -5,8 +5,8 @@ Webhook reciever API for Trello Bot
 * RethinkDB
 * RedisDB
 * NodeJS
-* [TrelloBot] (https://github.com/Trello-Bot-Community/TrelloBot)
-* [Turquoise] (https://github.com/Trello-Bot-Community/Turquoise)
+* [TrelloBot](https://github.com/Trello-Bot-Community/TrelloBot)
+* [Turquoise](https://github.com/Trello-Bot-Community/Turquoise)
 
 # Installation
 * Clone the repo
