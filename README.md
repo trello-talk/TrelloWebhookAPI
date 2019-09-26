@@ -16,4 +16,4 @@ Webhook reciever API for Trello Bot
 * Finally, run `npm install`
 
 # Usage
-* Once you run the install command, you can start the bot with `npm start`
+* Once you run the install command, you can start the program with `npm start`
