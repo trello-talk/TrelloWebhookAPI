@@ -27,7 +27,7 @@ module.exports = function(req, request, webhook, icon){
     request.post(webhook + "/slack")
     .set("User-Agent", Config.useragent)
     .send({
-      "text": "[]()",
+      "text": "",
       "attachments": [jso]
     }).end((err2, res3)=>{
       return res3;

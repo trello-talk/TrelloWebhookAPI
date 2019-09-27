@@ -2,7 +2,7 @@ module.exports = function(req, request, webhook, icon){
 	let jso = {}
 	if(req.body.action.data.listBefore){
 		jso = {
-			"text": "[]()",
+			"text": "",
 			"attachments": [
 				{
 					"author_link": req.body.model.url,
@@ -21,7 +21,7 @@ module.exports = function(req, request, webhook, icon){
 		}
 	}else if(req.body.action.data.old.name){
 		jso = {
-			"text": "[]()",
+			"text": "",
 			"attachments": [
 				{
 					"author_link": req.body.model.url,
@@ -39,7 +39,7 @@ module.exports = function(req, request, webhook, icon){
 		}
 	}else if(req.body.action.data.old.desc){
 		jso = {
-			"text": "[]()",
+			"text": "",
 			"attachments": [
 				{
 					"author_link": req.body.model.url,
@@ -58,7 +58,7 @@ module.exports = function(req, request, webhook, icon){
 		}
 	}else if(req.body.action.data.old.closed!=undefined){
 		jso = {
-			"text": "[]()",
+			"text": "",
 			"attachments": [
 				{
 					"author_link": req.body.model.url,

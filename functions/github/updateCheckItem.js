@@ -2,7 +2,7 @@ module.exports = function(req, request, webhook, icon){
 	let jso = {}
 	if(req.body.action.data.old.name){
 		jso = {
-			"text": "[]()",
+			"text": "",
 			"attachments": [
 				{
 					"author_link": req.body.model.url,

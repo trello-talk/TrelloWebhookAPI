@@ -2,7 +2,7 @@ module.exports = function(req, request, webhook, icon){
 	request.post(webhook+"/slack")
 	.set("User-Agent", Config.useragent)
 	.send({
-		"text": "[]()",
+		"text": "",
 		"attachments": [
 				{
 				"author_link": "https://trello.com/" + req.body.action.memberCreator.username,

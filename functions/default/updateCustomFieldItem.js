@@ -78,7 +78,7 @@ ${!added ? `**Old Value**: ${new Date(req.body.action.data.old.value.date).toUTC
     request.post(webhook + "/slack")
     .set("User-Agent", Config.useragent)
     .send({
-      "text": "[]()",
+      "text": "",
       "attachments": [jso]
     }).end((err2, res3)=>{
       return res3;

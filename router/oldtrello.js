@@ -58,7 +58,7 @@ router.post("/", (req, res) => {
 								case "voteOnCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -82,7 +82,7 @@ router.post("/", (req, res) => {
 								case "createList":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -105,7 +105,7 @@ router.post("/", (req, res) => {
 								case "createCheckItem":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -129,7 +129,7 @@ router.post("/", (req, res) => {
 								case "deleteCheckItem":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -153,7 +153,7 @@ router.post("/", (req, res) => {
 								case "addMemberToBoard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -177,7 +177,7 @@ router.post("/", (req, res) => {
 								case "makeAdminOfBoard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -201,7 +201,7 @@ router.post("/", (req, res) => {
 								case "makeNormalMemberOfBoard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -225,7 +225,7 @@ router.post("/", (req, res) => {
 								case "createCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -249,7 +249,7 @@ router.post("/", (req, res) => {
 								case "updateCheckItemStateOnCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -273,7 +273,7 @@ router.post("/", (req, res) => {
 								case "deleteCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -296,7 +296,7 @@ router.post("/", (req, res) => {
 								case "commentCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -319,7 +319,7 @@ router.post("/", (req, res) => {
 								case "removeChecklistFromCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -343,7 +343,7 @@ router.post("/", (req, res) => {
 								case "addChecklistToCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -367,7 +367,7 @@ router.post("/", (req, res) => {
 								case "addLabelToCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -391,7 +391,7 @@ router.post("/", (req, res) => {
 								case "removeLabelFromCard":
 									request.post(hookdata[boardid][c].webhook+"/slack")
 									.send({
-										"text": "[]()",
+										"text": "",
 										"attachments": [
 											{
 												"author_link": req.body.model.url,
@@ -416,7 +416,7 @@ router.post("/", (req, res) => {
 									jso = {}
 									if(req.body.action.data.listBefore){
 										jso = {
-											"text": "[]()",
+											"text": "",
 											"attachments": [
 												{
 													"author_link": req.body.model.url,
@@ -435,7 +435,7 @@ router.post("/", (req, res) => {
 										}
 									}else if(req.body.action.data.old.name){
 										jso = {
-											"text": "[]()",
+											"text": "",
 											"attachments": [
 												{
 													"author_link": req.body.model.url,
@@ -453,7 +453,7 @@ router.post("/", (req, res) => {
 										}
 									}else if(req.body.action.data.old.desc){
 										jso = {
-											"text": "[]()",
+											"text": "",
 											"attachments": [
 												{
 													"author_link": req.body.model.url,
@@ -472,7 +472,7 @@ router.post("/", (req, res) => {
 										}
 									}else if(req.body.action.data.old.closed!=undefined){
 										jso = {
-											"text": "[]()",
+											"text": "",
 											"attachments": [
 												{
 													"author_link": req.body.model.url,
