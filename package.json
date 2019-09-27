@@ -1,7 +1,7 @@
 {
   "name": "TrelloWebhookAPI",
   "description": "Trello Bot API",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "GPL-3.0",
   "author": "Yamboy1 <yamboyd1@gmail.com>",
   "contributors": [
