@@ -103,7 +103,7 @@ router.post("/", (req, res) => {
 					if(c == "id") return;
 					b = webhookBoard[c];
 					if(b.bits&&b.bits.length !== 0){
-						if(!b.bits.includes(req.body.action.type.toLowerCase())){
+						if(b.muted || !b.bits.includes(req.body.action.type.toLowerCase())){
 							return undefined // Skip request
 						}
 					}
