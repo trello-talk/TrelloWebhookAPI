@@ -102,6 +102,7 @@ router.post("/", (req, res) => {
 				Object.keys(webhookBoard).map((c)=>{
 					if(c == "id") return;
 					b = webhookBoard[c];
+					if (b.muted === true) return undefined;
 					if(b.bits&&b.bits.length !== 0){
 						if(b.muted || !b.bits.includes(req.body.action.type.toLowerCase())){
 							return undefined // Skip request
