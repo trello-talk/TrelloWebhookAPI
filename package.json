@@ -21,7 +21,7 @@
     "moment": "^2.19.3",
     "redis": "^2.6.0-2",
     "rethinkdb": "^2.3.3",
-    "superagent": "^3.8.1",
+    "superagent": "^5.1.0",
     "uuid": "^2.0.2"
   },
   "scripts": {
