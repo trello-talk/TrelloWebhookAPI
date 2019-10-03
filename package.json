@@ -22,7 +22,7 @@
     "redis": "^2.6.0-2",
     "rethinkdb": "^2.3.3",
     "superagent": "^3.8.1",
-    "uuid": "^2.0.2"
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "node main.js"
