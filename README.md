@@ -1,5 +1,6 @@
 # TrelloWebhookAPI
 Webhook receiver API for Trello Bot
+Used to receive webhooks FROM Trello.
 
 # Requirements
 * RethinkDB
