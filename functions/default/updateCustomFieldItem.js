@@ -30,7 +30,7 @@ module.exports = function(req, request, webhook, icon){
         "author_icon": icon,
         "title": `${req.body.action.memberCreator.fullName} ${removed ? "un" : ""}checked custom field \"${req.body.action.data.customField.name}\" on card \"${req.body.action.data.card.name}\"`,
         "title_link": `https://trello.com/b/${req.body.action.data.board.shortLink}`,
-        "thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+        "thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
         "text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})`
       }
@@ -43,7 +43,7 @@ module.exports = function(req, request, webhook, icon){
         "author_icon": icon,
         "title": `${req.body.action.memberCreator.fullName} ${removed ? "removed" : "changed"} custom field \"${req.body.action.data.customField.name}\" on card \"${req.body.action.data.card.name}\"`,
         "title_link": `https://trello.com/b/${req.body.action.data.board.shortLink}`,
-        "thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+        "thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
         "text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})
 ${!added ? `**Old Value**: ${req.body.action.data.old.value.text}\n`: ""}${!removed ? `**New Value**: ${req.body.action.data.customFieldItem.value.text}`: ""}`
@@ -57,7 +57,7 @@ ${!added ? `**Old Value**: ${req.body.action.data.old.value.text}\n`: ""}${!remo
         "author_icon": icon,
         "title": `${req.body.action.memberCreator.fullName} ${removed ? "removed" : "changed"} custom field \"${req.body.action.data.customField.name}\" on card \"${req.body.action.data.card.name}\"`,
         "title_link": `https://trello.com/b/${req.body.action.data.board.shortLink}`,
-        "thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+        "thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
         "text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})
 ${!added ? `**Old Value**: ${req.body.action.data.old.value.number}\n`: ""}${!removed ? `**New Value**: ${req.body.action.data.customFieldItem.value.number}`: ""}`
@@ -71,7 +71,7 @@ ${!added ? `**Old Value**: ${req.body.action.data.old.value.number}\n`: ""}${!re
         "author_icon": icon,
         "title": `${req.body.action.memberCreator.fullName} ${removed ? "removed" : "changed"} custom field \"${req.body.action.data.customField.name}\" on card \"${req.body.action.data.card.name}\"`,
         "title_link": `https://trello.com/b/${req.body.action.data.board.shortLink}`,
-        "thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+        "thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
         "text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})
 ${!added ? `**Old Value**: ${new Date(req.body.action.data.old.value.date).toUTCString()}\n`: ""}${!removed ? `**New Value**: ${new Date(req.body.action.data.customFieldItem.value.date).toUTCString()}`: ""}`
@@ -87,7 +87,7 @@ ${!added ? `**Old Value**: ${new Date(req.body.action.data.old.value.date).toUTC
         "author_icon": icon,
         "title": `${req.body.action.memberCreator.fullName} ${removed ? "removed" : "changed"} custom field \"${req.body.action.data.customField.name}\" on card \"${req.body.action.data.card.name}\"`,
         "title_link": `https://trello.com/b/${req.body.action.data.board.shortLink}`,
-        "thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+        "thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
         "text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})`
       }

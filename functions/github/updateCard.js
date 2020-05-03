@@ -30,7 +30,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": icon,
 					"title": `${req.body.action.memberCreator.fullName} moved card ${req.body.action.data.card.name} from list ${req.body.action.data.listBefore.name} to ${req.body.action.data.listAfter.name}`,
 					"title_link": `https://trello.com/c/${req.body.action.data.card.shortLink}`,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **List Moved From**: ${req.body.action.data.listBefore.name}
 **Current List**: ${req.body.action.data.listAfter.name}
@@ -49,7 +49,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": icon,
 					"title": `${req.body.action.memberCreator.fullName} renamed card ${req.body.action.data.old.name} to ${req.body.action.data.card.name}`,
 					"title_link": `https://trello.com/c/${req.body.action.data.card.shortLink}`,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Old Card Name**: ${req.body.action.data.old.name}
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})`
@@ -67,7 +67,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": icon,
 					"title": `${req.body.action.memberCreator.fullName} renamed card description in card ${req.body.action.data.card.name}`,
 					"title_link": `https://trello.com/c/${req.body.action.data.card.shortLink}`,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Old Card Descripton**: ${req.body.action.data.old.desc}
 **New Card Descripton**: ${req.body.action.data.card.desc}
@@ -86,7 +86,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": icon,
 					"title": `${req.body.action.memberCreator.fullName} ${req.body.action.data.card.closed ? "archived" : "unarchived"} card ${req.body.action.data.card.name}`,
 					"title_link": `https://trello.com/c/${req.body.action.data.card.shortLink}`,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})
 **Card**: [${req.body.action.data.card.name}](https://trello.com/c/${req.body.action.data.card.shortLink})`
 					/*"fields": [{

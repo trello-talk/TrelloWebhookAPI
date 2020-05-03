@@ -30,7 +30,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": opts.icon,
 					"title": `${req.body.action.memberCreator.fullName} renamed label \"${req.body.action.data.old.name}\" to \"${req.body.action.data.label.name}\"`,
 					"title_link": req.body.model.url,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})`
 				}
 			]
@@ -46,7 +46,7 @@ module.exports = function(req, request, webhook, icon){
 					"author_icon": opts.icon,
 					"title": `${req.body.action.memberCreator.fullName} recolored label \"${req.body.action.data.label.name}\" from ${req.body.action.data.old.color} to ${req.body.action.data.label.color}`,
 					"title_link": req.body.model.url,
-					"thumb_url": req.body.action.memberCreator.avatarHash ? "https://trello-avatars.s3.amazonaws.com/"+req.body.action.memberCreator.avatarHash+"/170.png" : undefined,
+					"thumb_url": req.body.action.memberCreator.avatarUrl ?req.body.action.memberCreator.avatarUrl+"/170.png" : undefined,
 					"text": `**Member**: ${req.body.action.memberCreator.fullName} (${req.body.action.memberCreator.username})`
 				}
 			]
